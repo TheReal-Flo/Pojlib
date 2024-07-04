@@ -32,6 +32,8 @@ jobs:
       run: git lfs pull | chmod +x ./gradlew
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2
+      with:
+        arguments: :wrapper:launcher:build
     - name: List all files
       run: ls -R ./wrapper
     - name: Upload artifact
