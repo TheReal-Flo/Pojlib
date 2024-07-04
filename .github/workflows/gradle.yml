@@ -33,7 +33,7 @@ jobs:
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2
     - name: List all files
-      run: ls -R
+      run: ls -R ./wrapper
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
