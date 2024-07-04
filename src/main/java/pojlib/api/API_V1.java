@@ -181,6 +181,18 @@ public class API_V1 {
     }
 
     /**
+     * Launch an instance as Demo
+     *
+     * @param activity Android activity object
+     * @param account Account object
+     * @param instance Instance object from {@link pojlib.api.API_V1#createNewInstance(Activity, MinecraftInstances, String, boolean, String, String)}
+     *                 or {@link pojlib.api.API_V1#load(MinecraftInstances, String)}
+     */
+    public static void launchInstanceAsDemo(Activity activity, MinecraftInstances.Instance instance) {
+        InstanceHandler.launchInstanceAsDemo(activity, instance);
+    }
+
+    /**
      * Logs the user out
      *
      * @param activity The base directory where minecraft should be setup

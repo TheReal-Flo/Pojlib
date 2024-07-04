@@ -57,6 +57,17 @@ public class MinecraftInstances {
             return allArgs;
         }
 
+        public List<String> generateLaunchArgsForDemo() {
+            String[] mcArgs = {"--username", "QuestCraftDemo", "--version", versionName, "--gameDir", gameDir,
+                    "--assetsDir", assetsDir, "--assetIndex", assetIndex, "--uuid", "6f36cc12-1559-4bd0-9ed9-7081fdcb2cb7".replaceAll("-", ""),
+                    "--accessToken", "-", "--userType", "mojang", "--versionType", "release"};
+
+            List<String> allArgs = new ArrayList<>(Arrays.asList("-cp", classpath));
+            allArgs.add(mainClass);
+            allArgs.addAll(Arrays.asList(mcArgs));
+            return allArgs;
+        }
+
         public ProjectInfo[] toArray() {
             if(extProjects == null) {
                 return new ProjectInfo[0];

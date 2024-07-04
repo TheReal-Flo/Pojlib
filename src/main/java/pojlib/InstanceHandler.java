@@ -296,4 +296,14 @@ public class InstanceHandler {
             e.printStackTrace();
         }
     }
+
+    public static void launchInstanceAsDemo(Activity activity, MinecraftInstances.Instance instance) {
+        try {
+            JREUtils.redirectAndPrintJRELog();
+            VLoader.setAndroidInitInfo(activity);
+            JREUtils.launchJavaVM(activity, instance.generateLaunchArgsForDemo(), instance);
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+    }
 }
