@@ -301,7 +301,7 @@ public class InstanceHandler {
         try {
             JREUtils.redirectAndPrintJRELog();
             VLoader.setAndroidInitInfo(activity);
-            JREUtils.launchJavaVM(activity, instance.generateLaunchArgsForDemo(), instance);
+            JREUtils.launchJavaVM(activity, instance.generateLaunchArgs(), instance);
         } catch (Throwable e) {
             e.printStackTrace();
         }
